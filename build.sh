@@ -12,31 +12,31 @@ FFREPO=https://github.com/treyturner/nvidia-virtualgl-selenium-node-firefox.git
 FFBRANCH=firefox_upgrade
 
 #clone
-if [ ! -d $BASEDIR ]
-then
+if [ ! -d $BASEDIR ]; then
     git clone $BASEREPO $BASEDIR
 else
     cd $BASEDIR
     git pull $BASEREPO
     cd ..
+fi
 
 #clone
-if [ ! -d $GCDIR ]
-then
+if [ ! -d $GCDIR ]; then
     git clone $GCREPO $GCDIR
 else
     cd $GCDIR
     git pull $GCREPO
     cd ..
+fi
 
 #clone
-if [ ! -d $FFDIR ]
-then
+if [ ! -d $FFDIR ]; then
     git clone $FFREPO $FFDIR
 else
     cd $FFDIR
     git pull $FFREPO
     cd ..
+fi
 
 #switch branches and build
 cd $BASEDIR
