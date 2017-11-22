@@ -4,7 +4,7 @@ dpkg --add-architecture i386
 #!/bin/bash
 apt-get update
 
-apt-get install libc6:i386 libstdc++6:i386
+apt-get install -y libc6:i386 libstdc++6:i386
 apt-get install -y xorg # X display server https://en.wikipedia.org/wiki/X.Org_Server
 
 # installing and configuring nvidia DRIVERS
