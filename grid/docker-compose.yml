@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+  selenium_hub:
+    image: selenium/hub:3.8.1-erbium
+    container_name: selenium_hub
+    privileged: true
+    ports:
+      - 4444:4444
+    environment:
+      - GRID_TIMEOUT=120000
+      - GRID_BROWSER_TIMEOUT=120000
+    networks:
+      - network
+
+  chrome:
+    image: treyturner/nvidia-virtualgl-selenium-node-chrome
+    depends_on:
+      - selenium_hub
+    environment:
+      - no_proxy=localhost
+      - TZ=America/Chicago
+      - HUB_PORT_4444_TCP_ADDR=selenium_hub
+      - HUB_PORT_4444_TCP_PORT=4444
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    networks:
+      - network
+
+  firefox:
+    image: treyturner/nvidia-virtualgl-selenium-node-firefox
+    depends_on:
+      - selenium_hub
+    environment:
+      - no_proxy=localhost
+      - TZ=America/Chicago
+      - HUB_PORT_4444_TCP_ADDR=selenium_hub
+      - HUB_PORT_4444_TCP_PORT=4444
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    networks:
+      - network
+
+networks:
+  network:
+
