@@ -22,5 +22,10 @@ echo "cleaning setup files"
 rm ./*setup.sh
 rm ./*.md
 
+echo "building selenium hub and node images"
+cd grid
+./build.sh
+cd ..
+
 echo "setup complete... rebooting now"
 reboot now
