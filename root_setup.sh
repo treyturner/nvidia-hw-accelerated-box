@@ -9,7 +9,7 @@ apt-get install -y xorg # X display server https://en.wikipedia.org/wiki/X.Org_S
 
 # installing and configuring nvidia DRIVERS
 apt-get install build-essential -y
-curl -O http://us.download.nvidia.com/XFree86/Linux-x86_64/384.90/NVIDIA-Linux-x86_64-384.90.run
+curl -O http://us.download.nvidia.com/XFree86/Linux-x86_64/384.111/NVIDIA-Linux-x86_64-384.111.run
 chmod +x ./NVIDIA-Linux-x86_64-*.run
 ./NVIDIA-Linux-x86_64-*.run -q -a -n -X -s
 
