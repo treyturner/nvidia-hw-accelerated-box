@@ -24,7 +24,7 @@ rm ./*.md
 
 echo "building selenium hub and node images"
 cd grid
-./build.sh
+bash build.sh
 cd ..
 
 echo "setup complete... rebooting now"
