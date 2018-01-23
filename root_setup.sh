@@ -128,11 +128,11 @@ apt-get install -y mesa-utils
 
 # install turbovnc
 # can be updated to 1.5.1
-export LIBJPEG_VERSION=1.4.2
+export LIBJPEG_VERSION=1.5.3
 wget http://downloads.sourceforge.net/project/libjpeg-turbo/${LIBJPEG_VERSION}/libjpeg-turbo-official_${LIBJPEG_VERSION}_amd64.deb
 dpkg -i libjpeg-turbo-official*.deb && rm libjpeg-turbo-official*.deb
 # can be updated to 2.1
-export TURBOVNC_VERSION=2.0.1
+export TURBOVNC_VERSION=2.1.2
 wget http://downloads.sourceforge.net/project/turbovnc/${TURBOVNC_VERSION}/turbovnc_${TURBOVNC_VERSION}_amd64.deb
 dpkg -i turbovnc*.deb && rm turbovnc*.deb
 
