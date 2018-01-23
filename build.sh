@@ -1,15 +1,15 @@
 #!/bin/bash
 BASEDIR=nvidia-virtualgl-selenium-node-base
 BASEREPO=https://github.com/treyturner/nvidia-virtualgl-selenium-node-base.git
-BASEBRANCH=selenium_upgrade
+BASEBRANCH=master
 
 GCDIR=nvidia-virtualgl-selenium-node-chrome
 GCREPO=https://github.com/treyturner/nvidia-virtualgl-selenium-node-chrome.git
-GCBRANCH=chrome_upgrade
+GCBRANCH=master
 
 FFDIR=nvidia-virtualgl-selenium-node-firefox
 FFREPO=https://github.com/treyturner/nvidia-virtualgl-selenium-node-firefox.git
-FFBRANCH=firefox_upgrade
+FFBRANCH=master
 
 #clone
 if [ ! -d $BASEDIR ]; then
