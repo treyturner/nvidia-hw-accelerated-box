@@ -1,11 +1,15 @@
+# http://dougchang333.blogspot.com/2017/01/nvidia-ubuntu-1604-unable-to-find.html
+dpkg --add-architecture i386
+
 #!/bin/bash
 apt-get update
 
+apt-get install -y libc6:i386 libstdc++6:i386
 apt-get install -y xorg # X display server https://en.wikipedia.org/wiki/X.Org_Server
 
 # installing and configuring nvidia DRIVERS
 apt-get install build-essential -y
-curl -O http://us.download.nvidia.com/XFree86/Linux-x86_64/367.57/NVIDIA-Linux-x86_64-367.57.run
+curl -O http://us.download.nvidia.com/XFree86/Linux-x86_64/384.90/NVIDIA-Linux-x86_64-384.90.run
 chmod +x ./NVIDIA-Linux-x86_64-*.run
 ./NVIDIA-Linux-x86_64-*.run -q -a -n -X -s
 
