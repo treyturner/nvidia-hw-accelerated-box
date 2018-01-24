@@ -22,6 +22,9 @@ echo "cleaning setup files"
 rm ./*setup.sh
 rm ./*.md
 
+echo "creating nvidia driver volume for docker (the only way I know how)"
+nvidia-docker run --rm nvidia/cuda nvidia-smi
+
 echo "building selenium hub and node images"
 cd grid
 bash build.sh
